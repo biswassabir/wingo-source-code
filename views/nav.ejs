@@ -1,0 +1,103 @@
+<style>
+    .block-click {
+        pointer-events: none;  
+    }
+</style>
+<div data-v-432e6ed0="" class="nav c-pr" id="nav_checkUrl" data-url="">
+    <div class="van-hairline--top-bottom van-tabbar van-tabbar--fixed">
+        <div class="van-tabbar-item" data-url="/home" onclick="location.href='/home'">
+            <div class="van-tabbar-item__icon">
+                <!---->
+            </div>
+            <div class="van-tabbar-item__text">
+                <div>
+                    <img src="/images/home1.png">
+                </div>
+                <span class="name">Home</span>
+            </div>
+        </div>
+        <div class="van-tabbar-item" data-url="/checkIn" onclick="location.href='/checkIn'">
+            <div class="van-tabbar-item__icon">
+                <!---->
+            </div>
+            <div class="van-tabbar-item__text">
+                <div>
+                    <img src="/images/checked.png">
+                </div>
+                <span class="name">Attendance</span>
+            </div>
+        </div>
+        <div class="van-tabbar-item" data-url="/promotion" onclick="location.href='/promotion'">
+            <div class="van-tabbar-item__icon">
+                <!---->
+            </div>
+            <div class="van-tabbar-item__text">
+                <div class="muan">
+                    <img src="/images/invite.webp" class="img">
+                </div>
+                <span class="name">Promotion</span>
+            </div>
+        </div>
+        <div class="van-tabbar-item" data-url="/keFuMenu" onclick="location.href='/keFuMenu'">
+            <div class="van-tabbar-item__icon">
+                <!---->
+            </div>
+            <div class="van-tabbar-item__text">
+                <div>
+                    <img src="/images/wallet.png">
+                </div>
+                <span class="name">Support</span>
+            </div>
+        </div>
+        <div class="van-tabbar-item" data-url="/mian" onclick="location.href='/mian'">
+            <div class="van-tabbar-item__icon">
+                <!---->
+            </div>
+            <div class="van-tabbar-item__text">
+                <div>
+                    <img src="/images/my.png">
+                </div>
+                <span class="name">Account</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let url = window.location.pathname;
+    let check = document.querySelector(`.van-tabbar-item[data-url='${url}']`);
+    document.querySelector('#nav_checkUrl').setAttribute('data-url', url);
+    if (check) check.classList.add('block-click');
+    let pathname = document.querySelector('#nav_checkUrl').getAttribute('data-url');
+    let listNavs = document.querySelector('#nav_checkUrl .van-hairline--top-bottom').children;
+    let select = 0;
+    switch (pathname) {
+        case '/home':
+            select = 0;
+            break;
+        case '/checkIn':
+            select = 1;
+            break;
+        case '/promotion':
+            select = 2;
+            break;
+        case '/wallet':
+            select = 3;
+            break;
+        case '/mian':
+            select = 4;
+            break;
+        default:
+            break;
+    }
+
+    let arr = [
+        { id: 1, src: '/images/home.png' },
+        { id: 2, src: '/images/checkIn.png' },
+        { id: 3, src: '/images/invite.webp' },
+        { id: 4, src: '/images/wallet2.png' },
+        { id: 5, src: '/images/me2.png' },
+    ];
+
+    listNavs[select].children[1].children[0].children[0].setAttribute('src', arr[select].src); // img
+    listNavs[select].children[1].children[1].classList.add('action'); // name active
+</script>

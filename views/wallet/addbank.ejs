@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 48.16px">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+    <title>79lottery</title>
+    <link href="/css/wallet/main.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-1.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-2.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-3.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+        .mian[data-v-7aa0f84a]{background-color:#fbfcfd}.mian .bank[data-v-7aa0f84a]{padding:.4rem}.mian .bank .box[data-v-7aa0f84a]{background:#fff;box-shadow:0 .08rem .69333rem .10667rem #f1f2f5;border-radius:.26667rem;padding:.4rem}.mian .bank .box .item[data-v-7aa0f84a]{margin-bottom:.26667rem}.mian .bank .box .item .lab[data-v-7aa0f84a]{font-size:.4rem;margin-bottom:.26667rem}.mian .bank .box .item .input .ipt[data-v-7aa0f84a]{width:100%;padding:0 .4rem;height:.93333rem;line-height:.93333rem;border-radius:.13333rem;border:.05333rem solid #faa09d}.mian .bank .bank-btn .btn[data-v-7aa0f84a]{height:1.01333rem;width:60%;box-shadow:0 0 .21333rem .02667rem rgba(92,186,71,.72)}
+    </style>
+</head>
+
+<body style="font-size: 12px">
+    <div id="app">
+        <div data-v-7aa0f84a="" class="mian">
+            <div data-v-106b99c8="" data-v-7aa0f84a="" class="navbar">
+                <div data-v-106b99c8="" class="navbar-left" onclick="location.href='/wallet/withdrawal'">
+                    <div data-v-106b99c8="" class="bank c-row c-row-middle-center">
+                        <img data-v-106b99c8="" src="/images/back.c3244ab0.png" class="navbar-back" />
+                    </div>
+                </div>
+                <div data-v-106b99c8="" class="navbar-title">Wallet</div>
+                <div data-v-106b99c8="" class="navbar-right"></div>
+            </div>
+            <div data-v-7aa0f84a="" class="bank">
+                <div data-v-7aa0f84a="" class="box">
+                    <div data-v-7aa0f84a="" class="c-row m-b-10 c-row-middle">
+                        <div data-v-7aa0f84a="" class="van-image" style="width: 40px; height: 40px">
+                            <img src="/images/pay_icon_debitcard_red.webp" class="van-image__img" />
+                        </div>
+                        <div data-v-7aa0f84a="" class="p-l-15">Add Wallet </div>
+                    </div>
+                    <div data-v-7aa0f84a="" class="item">
+                        <div data-v-7aa0f84a="" class="lab">Add TRX Address</div>
+                        <div data-v-7aa0f84a="" class="input">
+                            <input data-v-7aa0f84a="" type="text" placeholder="Tron (TRC 20)"
+                                class="ipt" />
+                        </div>
+                    </div>
+                  
+                    
+                    <!---->
+                </div>
+                <div data-v-7aa0f84a="" class="c-row c-row-center m-t-20 bank-btn">
+                    <button data-v-7aa0f84a=""
+                        class="btn van-button van-button--default van-button--normal van-button--block van-button--round"
+                        style="
+                color: rgb(255, 255, 255);
+                background: rgb(92, 186, 71);
+                border-color: rgb(92, 186, 71);
+              ">
+                        <div data-v-7aa0f84a="" class="van-button__content">
+                            <span data-v-7aa0f84a="" class="van-button__text">
+                                Add Wallet
+                            </span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div data-v-7692a079="" data-v-7aa0f84a="" class="Loading c-row c-row-middle-center" style="display: none">
+                <div data-v-7692a079="" class="van-loading van-loading--circular">
+                    <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular"
+                        style="color: rgb(242, 65, 59)"><svg data-v-7692a079="" viewBox="25 25 50 50"
+                            class="van-loading__circular">
+                            <circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle>
+                        </svg></span>
+                </div>
+            </div>
+            <!---->
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        function alertMess(text, sic) {
+            $('body').append(
+                `
+                <div data-v-1dcba851="" class="msg">
+                    <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
+                </div>
+                `
+            );
+            setTimeout(() => {
+                $('.msg .msg-content').removeClass('v-enter-active v-enter-to');
+                $('.msg .msg-content').addClass('v-leave-active v-leave-to');
+                setTimeout(() => {
+                    $('.msg').remove();
+                }, 100);
+                sic.removeClass('block-click');
+            }, 1000);
+        }
+        $('button').click(function (e) { 
+            e.preventDefault();
+            let name_bank = $('.ipt:eq(0)').val().trim();
+            let name_user = $('.ipt:eq(1)').val().trim();
+            let stk = $('.ipt:eq(2)').val().trim();
+            let tp = $('.ipt:eq(3)').val().trim();
+            let email = $('.ipt:eq(4)').val().trim();
+            let sdt = $('.ipt:eq(5)').val().trim();
+            let tinh = $('.ipt:eq(6)').val().trim();
+            let chi_nhanh = $('.ipt:eq(7)').val().trim();
+            if (name_bank && name_user && stk && tp && email && sdt && tinh && chi_nhanh) {
+                $.ajax({
+                    type: "POST",
+                    url: "/api/webapi/addBank",
+                    data: {
+                        name_bank: name_bank,
+                        name_user: name_user,
+                        stk: stk,
+                        tp: tp,
+                        email: email,
+                        sdt: sdt,
+                        tinh: tinh,
+                        chi_nhanh: chi_nhanh
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        console.log(response);
+                        alertMess(response.message, $(this));
+                    }
+                });
+            } else {
+                alertMess('Please enter complete information', $(this));
+            }
+        });
+    </script>
+</body>
+
+</html>

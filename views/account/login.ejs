@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 47.68px">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport" />
+    <title>79lottery</title>
+    <link href="/css/account/chunk-vendors.css" rel="stylesheet" />
+    <link href="/css/account/app.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+
+        .msg-content {
+            animation: zoom-in 0.45s ease reverse;
+        }
+
+        @keyframes zoom-in {
+            0% {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(0.6, 0.6);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1, 1);
+            }
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px">
+    <div id="app">
+        <div data-v-a0753f48="" class="mian login">
+            <div data-v-a0753f48="" class="login-banner">
+                <div data-v-a0753f48="" class="bankPage c-row c-row-middle-center">
+                    <div data-v-a0753f48="" class="bank c-row c-row-middle-center" onclick="location.href='/home'">
+                        <img data-v-a0753f48="" src="/images/back.c3244ab0.png" class="navbar-back" />
+                    </div>
+                </div>
+                <img data-v-a0753f48="" src="/images/17-49-48-625.png" class="logo" style="height: 0.80333rem!important;" />
+            </div>
+            <div data-v-a0753f48="" class="login-box" style="padding-bottom: 50px;">
+                <div data-v-a0753f48="" class="tit">Login</div>
+                <div data-v-a0753f48="" class="mian-from">
+                    <div data-v-a0753f48="" class="lab">
+                         <span data-v-a0753f48=""> </span>
+                    </div>
+                    <div data-v-a0753f48="" class="item c-row c-row-center first">
+                        <div data-v-a0753f48="" class="c-row number">
+                            <span data-v-a0753f48="" class="c-row c-row-middle-center">
+                                <img data-v-a0753f48="" src="/images/phone.png" class="mobile" />
+                            </span>
+                            <div data-v-a0753f48="" class="p-l-5">+84</div>
+                        </div>
+                        <input data-v-a0753f48="" maxlength="16" type="text" placeholder="Phone Number" />
+                        <!-- oninput="value=value.replace(/\D/g,'')" -->
+                    </div>
+                    <div data-v-a0753f48="" class="item c-row c-row-center">
+                        <span data-v-a0753f48="" class="img c-row c-row-middle-center">
+                            <img data-v-a0753f48="" src="/images/password.png" class="password" />
+                        </span>
+                        <input data-v-d8986e5e="" data-v-a0753f48="" type="password" placeholder="Password" οnkeyup="value=value.replace(/[^\w\.\/]/ig,'')" class="pw-input" />
+                    </div>
+                    <div data-v-a0753f48="" class="mian-btn">
+                        <button data-v-a0753f48=""
+                            class="gradient van-button van-button--default van-button--normal van-button--block van-button--round"
+                            style="color: rgb(255, 255, 255);background: rgb(92, 186, 71);border-color: rgb(92, 186, 71);">
+                            <div data-v-a0753f48="" class="van-button__content">
+                                <span data-v-a0753f48="" class="van-button__text">
+                                    <span data-v-a0753f48="">Login</span>
+                                </span>
+                            </div>
+                        </button>
+                        <div data-v-a0753f48="" class="text m-t-15 c-row c-row-middle-center">
+                            <span data-v-a0753f48="" class="p-r-5" onclick="location.href='/register'">Register</span>｜
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div data-v-7692a079="" data-v-a0753f48="" class="Loading c-row c-row-middle-center" style="display: none">
+                <div data-v-7692a079="" class="van-loading van-loading--circular">
+                    <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular"
+                        style="color: rgb(242, 65, 59)">
+                        <svg data-v-7692a079="" viewBox="25 25 50 50" class="van-loading__circular">
+                            <circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div data-v-7692a079="" data-v-7ee4aaeb="" class="Loading c-row c-row-middle-center" style="display: none;"><div data-v-7692a079="" class="van-loading van-loading--circular"><span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular" style="color: rgb(242, 65, 59);"><svg data-v-7692a079="" viewBox="25 25 50 50" class="van-loading__circular"><circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle></svg></span></div></div>
+    </div>
+    <div class="van-overlay" style="z-index: 2003; display: none;"></div>
+    <div class="alert-toast"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function unsetCookie() {
+            setCookie('token', '', 0);
+            setCookie('auth', '', 0);
+        }
+        // $.ajax({
+        //     type: "GET",
+        //     url: "/api/webapi/GetUserInfo",
+        //     data: {
+                
+        //     },
+        //     dataType: "json",
+        //     success: function (response) {
+        //         if (data.status === false) {
+        //             unsetCookie();
+        //             return false;
+        //         };
+        //         location.href = "/";
+        //     }
+        // });
+        // fetch('/api/webapi/GetUserInfo')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log(data);
+        //         if (data.status === false) {
+        //             unsetCookie();
+        //             return false;
+        //         };
+        //         location.href = "/";
+        //     });
+    </script>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function alertMess(text) {
+            let length = $('.alert-toast .msg').length;
+            if (length == 0) {
+                $('.alert-toast').append(
+                    `
+                    <div data-v-1dcba851="" class="msg">
+                        <div data-v-1dcba851="" class="msg-content" style=""> ${text} </div>
+                    </div>
+                    `
+                );
+                setTimeout(() => {
+                    $('.msg').fadeOut();
+                    setTimeout(() => {
+                        $('.alert-toast .msg').remove();
+                    }, 100);
+                }, 1500);
+            }
+        }
+
+        function validateForm(username, password, text) {
+            if (!username || !password) {
+                alertMess(text);
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        $('button').click(async (e) => {
+            e.preventDefault();
+            let username = $('input:eq(0)').val().trim();
+            let password = $('input:eq(1)').val().trim();
+            let status = validateForm(username, password, 'Please fill in the necessary part.');
+            if (status) {
+                $('.van-overlay').fadeIn(10);
+                $.ajax({
+                    type: "POST",
+                    url: "/api/webapi/login",
+                    data: {
+                        username: username,
+                        pwd: password,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.status === true) {
+                            $('.van-overlay').fadeOut(300);
+                            $('.Loading').fadeIn(10);
+                            setCookie('token', response.token, 1);
+                            setCookie('auth', response.value, 1);
+                            // alertMess(response.message);
+                            setTimeout(() => {
+                                location.href = '/home';
+                            }, 500);
+                        } else {
+                            $('.van-overlay').fadeOut(300);
+                            alertMess(response.message);
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+    <script>
+        let getWBody = $('.mian').width();
+
+        $('html').css('font-size', `${getWBody / 10}px`);
+        $('.van-tabbar .van-tabbar-item').css({
+            'transform': 'scale(0.9)',
+        });
+        $(window).resize(() => {
+            let getWBody = $('.mian').width();
+            $('html').css('font-size', `${getWBody / 10}px`);
+            $('.van-tabbar .van-tabbar-item').css({
+                'transform': 'scale(0.9)',
+            });
+        });
+    </script>
+</body>
+
+</html>

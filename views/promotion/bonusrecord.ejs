@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 48.24px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <title>79lottery</title>
+    <link href="/css/promotion/app.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_1.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_2.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_3.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_4.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_5.css" rel="stylesheet" />
+    <link href="/css/promotion/chunk-0_6.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon">
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+    <div id="app">
+        <div data-v-8c7eba72="" class="mian">
+            <div data-v-106b99c8="" data-v-8c7eba72="" class="navbar">
+                <div data-v-106b99c8="" class="navbar-left" onclick="location.href='/promotion'">
+                    <div data-v-106b99c8="" class="bank c-row c-row-middle-center">
+                        <img data-v-106b99c8="" src="/images/back.c3244ab0.png" class="navbar-back">
+                    </div>
+                </div>
+                <div data-v-106b99c8="" class="navbar-title">Lịch sử giới thiệu</div>
+                <div data-v-106b99c8="" class="navbar-right"></div>
+            </div>
+            <div data-v-8c7eba72="" class="box">
+                <div data-v-8c7eba72="" class="list m-b-10">
+                    <div data-v-8c7eba72="" role="feed" class="van-list">
+                        <div id="van-list">
+
+                        </div>
+                        <div class="van-list__finished-text">Không còn nữa</div>
+                        <div class="van-list__placeholder"></div>
+                    </div>
+                </div>
+            </div>
+            <div data-v-7692a079="" data-v-8c7eba72="" class="Loading c-row c-row-middle-center" style="display: none;">
+                <div data-v-7692a079="" class="van-loading van-loading--circular">
+                    <span data-v-7692a079="" class="van-loading__spinner van-loading__spinner--circular" style="color: rgb(242, 65, 59);">
+                        <svg data-v-7692a079="" viewBox="25 25 50 50" class="van-loading__circular"> 
+                            <circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@master/qrcode.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        function formateT(params) {
+            let result = (params < 10) ? "0" + params : params;
+            return result;
+        }
+
+        function timerJoin(params = '') {
+            let date = '';
+            if (params) {
+                date = new Date(Number(params));
+            } else {
+                date = new Date();
+            }
+            let years = formateT(date.getFullYear());
+            let months = formateT(date.getMonth() + 1);
+            let days = formateT(date.getDate());
+
+            let hours = formateT(date.getHours());
+            let minutes = formateT(date.getMinutes());
+            let seconds = formateT(date.getSeconds());
+            return years + '/' + months + '/' + days;
+        }
+        $('.nav .van-tabbar-item:eq(0) img').attr('src', '/images/home1.png');
+        $('.nav .van-tabbar-item:eq(0) .name').removeClass('action');
+        $('.nav .van-tabbar-item:eq(2) .name').addClass('action');
+        function MemRender(datas) {
+            let html = '';
+            datas.map((data) => {
+                html += `
+                        <div data-v-8c7eba72="" class="item c-row c-row-between c-row-middle m-b-5">
+                            <div data-v-8c7eba72="">
+                                <div data-v-8c7eba72="" class="money"> ${data.id_user} (${data.phone}) </div>
+                            </div>
+                            <div data-v-8c7eba72="">
+                                <div data-v-8c7eba72="" class="state m-b-5">
+                                    <span data-v-8c7eba72="" style="color: rgb(153, 153, 153);">${timerJoin(data.time)}</span>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+            });
+            $('#van-list').html(html);
+        }
+        $.ajax({
+            type: "GET",
+            url: "/api/webapi/myTeam",
+            dataType: "json",
+            success: function (response) {
+                MemRender(response.mem);
+            }
+        });
+    </script>
+</body>
+
+</html>
